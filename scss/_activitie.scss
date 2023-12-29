@@ -1,0 +1,109 @@
+.activitie {
+  @include breakpoints-up(large) {
+    margin-top: 100px;
+  }
+
+  @include breakpoints-down(medium) {
+    margin-top: 50px;
+  }
+
+  &__title {
+    span:first-child {
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-bottom: 28px;
+    }
+
+    h1:last-child {
+      color: $lightDarkBlue;
+      font-size: 32px;
+
+      @include breakpoints-down(small) {
+         font-size: 25px;
+      }
+    }
+  }
+
+  &__main {
+      border: 2px dashed $primary-color;
+      border-radius: 100px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-top: 70px;
+
+      @include breakpoints-down(medium) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @include breakpoints-down(medium) {
+         margin-top: 45px;
+      }
+
+      @include breakpoints-down(small) {
+         flex-direction: column;
+      }
+
+      @include breakpoints-down(small) {
+         padding-left: 5px;
+         padding-right: 5px;
+      }
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @include breakpoints-down(medium) {
+        width: 120px;
+    }
+
+    @include breakpoints-down(small) {
+       width: 100px;
+    }
+  }
+
+  &__description {
+    margin-left: 30px;
+    
+     @include breakpoints-down(medium) {
+        margin-top: 10px;
+      }
+     
+
+     span:first-child {
+        color: $lightGray;
+     }
+
+     span:nth-child(2) {
+        margin-left: 25px;
+        color: $lightGray;
+
+        @include breakpoints-down(small) {
+           margin-left: 30px;
+        }
+     }
+
+     h3:nth-child(3) {
+        color: $lightDarkBlue;
+        margin-top: 20px;
+        font-size: 24px;
+
+        @include breakpoints-down(small) {
+            font-size: 20px;
+        }
+     }
+
+     p:nth-child(4) > span {
+        color: $primary-color;
+     }
+
+     p:last-child > span {
+        color: $primary-color;
+     }
+
+  }
+}

@@ -1,0 +1,101 @@
+.about {
+
+  @include breakpoints-up(large) {
+    margin-top: 6.25rem;
+}
+
+  &__description {
+    max-width: 25rem;
+
+    a:first-child {
+      text-transform: uppercase;
+    }
+
+    h1:nth-child(2) {
+      font-size: 1.8125rem;
+      color: $darkBlue;
+      margin-top: 24px;
+
+      @include breakpoints-down(small) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p:nth-child(3) {
+      font-size: 0.875rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    button:last-child {
+      color: $white;
+      border: none;
+      background-color: $skylightblue;
+      padding: 1.25rem 2.5rem;
+      border-radius: 0.1875rem;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
+
+      @include breakpoints-down(small) {
+        padding: 1rem 2rem;
+      }
+    }
+
+    @include breakpoints-down(small) {
+      order: 1;
+      margin-top: 100px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+
+    @include breakpoints-down(medium) {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+
+    @include breakpoints-down(small) {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+
+    &::before {
+      margin-top: 1.875rem;
+      width: 100%;
+      border: 2px dashed $lightyellow;
+      height: 100%;
+      background-image: url(/images/children--image.jpg);
+      background-position: center top;
+      z-index: 1;
+    }
+
+    &::after {
+      top: 1.875rem;
+      left: 4.375rem;
+      z-index: 3;
+      background-image: url(/images/children--image.jpg);
+      width: 150%;
+      height: 150%;
+      border: 2px dashed $primary-color;
+      background-position: center bottom;
+    }
+  }
+}

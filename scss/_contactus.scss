@@ -1,0 +1,107 @@
+
+.contactUs {
+
+    @include breakpoints-up(large) {
+        margin-top: 6.25rem;
+    }
+
+    @include breakpoints-down(medium) {
+        margin-top: 50px;
+    }
+
+    &__main {
+        background-image: url(/images/starry-night.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 44.5rem;
+        padding-top: 70px;
+
+        @include breakpoints-down(small) {
+            padding-top: 35px;
+        }
+    }
+
+    &__description {
+        margin-right: 100px;
+
+        @include breakpoints-down(medium) {
+            margin-right: 50px;
+        }
+
+        h1:first-child {
+            color: $white;
+            font-size: 30px;
+
+            @include breakpoints-down(medium) {
+                font-size: 20px;
+            }
+        }
+
+        span:nth-child(2) {
+            color: $primary-color;
+        }
+
+        > p {
+            color: $white;
+            font-size: 18px;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 49px;
+
+            @include breakpoints-down(medium) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__form {   
+        h1:first-child {
+            color: $white;
+            font-size: 30px;
+        }
+
+        form {
+         padding: 48px 44px 43px 39px;
+         text-align: center;
+         border: 5px solid $Gray;
+         border-radius: 5px;
+
+         @include breakpoints-down(small) {
+            padding: 30px 40px;
+         }
+            div {
+                margin-bottom: 20px;
+            }
+
+            input {
+                width: 369px;
+                height: 58px;
+                background: linear-gradient(to right, $Gray, $slate);
+                border: none;
+                border-radius: 5px;
+                padding: 15px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @include breakpoints-down(small) {
+                    width: 100%;
+                }
+            }
+
+            button {
+                width: 100%;
+                color: $white;
+                background-color: $primary-color;
+                cursor: pointer;
+                padding: 23px 60px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+        }
+    }
+}

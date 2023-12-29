@@ -1,0 +1,101 @@
+.feature {
+  margin-top: 6.25rem;
+
+  @include breakpoints-down(medium) {
+    margin-top: 50px;
+  }
+
+  &__content {
+    p:first-child {
+      color: $lime;
+      text-transform: uppercase;
+
+      @include breakpoints-down(medium) {
+        font-size: 0.875rem;
+      }
+    }
+
+    h1:nth-child(2) {
+      color: $lightDarkBlue;
+      font-size: 1.875rem;
+
+      @include breakpoints-down(small) {
+         font-size: 1.5625rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 47.5rem;
+    margin-top: 25px;
+
+    @include breakpoints-down(small) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__icons {
+    max-width: 16.563rem;
+
+    &__item {
+      @include flex-ai-c;
+
+      margin-bottom: 60px;
+      border: 2px dashed $primary-color;
+      border-radius: 40px;
+      padding: 5px 0px 5px 30px;
+
+      span:last-child {
+        color: $primary-color;
+      }
+
+      @include breakpoints-down(small) {
+         margin-bottom: 35px;
+      }
+
+    }
+
+    &__item1 {
+      @include flex-ai-c;
+      margin-bottom: 60px;
+      border: 2px dashed $slate;
+      border-radius: 40px;
+      padding: 5px 0px 5px 30px;
+
+      .feature__icons__title {
+        color: $lightDarkBlue;
+        font-weight: 500;
+      }
+
+     @include breakpoints-down(small) {
+         margin-bottom: 35px;
+      }
+
+    }
+  }
+
+  &__description {
+    h1:first-child {
+      color: $lightDarkBlue;
+      font-size: 1.875rem;
+
+      @include breakpoints-down(small) {
+         font-size: 24px;
+      }
+    }
+
+    p:nth-child(2) {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    p:last-child {
+      display: inline;
+      font-size: 0.875rem;
+      margin-left: 10px;
+    }
+  }
+}

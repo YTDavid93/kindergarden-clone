@@ -1,0 +1,118 @@
+.testimonial {
+  @include breakpoints-up(large) {
+    margin-top: 6.25rem;
+  }
+
+  @include breakpoints-down(medium) {
+    margin-top: 3.125rem;
+  }
+
+  &__heading {
+    span:first-child {
+      text-transform: uppercase;
+      color: $lime;
+    }
+
+    h1:nth-child(2) {
+      color: $lightDarkBlue;
+      font-size: 1.875rem;
+      margin-top: 1.813rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoints-down(medium) {
+        grid-template-columns: 1fr;
+    }
+  }
+
+
+  &__title {
+    margin-top: 3.125rem;
+
+    @include breakpoints-down(medium) {
+        margin-top: 2.5rem;
+    }
+
+    
+  }
+
+  &__image {
+    width: 5.625rem;
+    height: 5.625rem;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__description {
+    max-width: 18.75rem;
+
+    p:first-child {
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    span:last-child {
+      color: $lightGray;
+    }
+  }
+
+  &__subscription {
+    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    margin-top: 6.25rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    @include breakpoints-down(medium) {
+        margin-top: 3.125rem;
+    }
+
+    @include breakpoints-down(medium) {
+        padding-left: 0.938rem;
+        padding-right: 0.938rem;
+    }
+  }
+
+  &__main {
+    span:first-child {
+      color: $Cyan;
+    }
+
+    h3:last-child {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__mail {
+     
+     input:first-child {
+      width: 30.625rem;
+      height: 3.75rem;
+      background: linear-gradient(to right, $Gray, $slate);
+      border: none;
+      padding: 0.938rem;
+
+      @include breakpoints-down(medium) {
+        width: 350px;
+        height: 45px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+     img:last-child {
+        position: relative;
+        padding: 15px;
+        left: -4px;
+        top: 22px;
+        bottom: -21px
+     }
+  }
+}
+

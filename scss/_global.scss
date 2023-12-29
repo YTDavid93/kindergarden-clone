@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&family=Rubik:wght@300;400;600&display=swap');
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: 'Rubik', sans-serif;
+  // overflow-x: hidden;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+p{
+   font-size: 1rem;
+   color: $lightDarkBlue;
+}
+
+.flex {
+  display: flex;
+ 
+  &-direc-c {
+    flex-direction: column;
+  }
+
+  &-jc-fs {
+    justify-content: flex-start;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-sa {
+    justify-content: space-around;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+
+// visibility 
+
+.hide-for-mobile {
+  @include breakpoints-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+// spacing
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  
+  @include breakpoints-down(medium) {
+    width: 90vw;
+  }
+}
+
+.fd-c-m {
+  @include breakpoints-down(medium) {
+    flex-wrap: wrap;
+  }
+}
+
+.fd-c {
+  @include breakpoints-down(small) {
+     flex-direction: column;
+  }
+}
+
+.main {
+  @include breakpoints-up(large) {
+    gap: 10%;
+  }
+}
+
+// for width, height and margin-right in features sections
+.image {
+  width: 2.5rem;
+  height: auto;
+  margin-right: 0.625rem;
+}
+
+// button
+
+.button-1 {
+   position: fixed;
+   right: 10px;
+   bottom: 20px;
+   border: none;
+   border-radius: 20px;
+   background: $primary-color;
+   cursor: pointer;
+
+   img:first-child {
+     width: 20px;
+     height: 25px;
+   }
+
+}

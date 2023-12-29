@@ -1,0 +1,122 @@
+.program {
+
+  @include breakpoints-up(large) {
+      margin-top: 7.5rem;
+  }
+
+  @include breakpoints-down(medium) {
+     margin-top: 3.125rem;
+  }
+
+  &__main {
+    background-image: url(/images/sun-cloud.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -11.625rem;
+    min-height: 28.4375rem;
+
+    p:first-child {
+      color: $primary-color;
+      text-transform: uppercase;
+      padding-top: 1.5rem;
+
+      @include breakpoints-down(small) {
+         font-size: 0.875rem;
+      }
+    }
+
+    h1:nth-child(2) {
+      font-size: 1.875rem;
+      color: $lightDarkBlue;
+
+      @include breakpoints-down(small) {
+        font-size: 1.5625rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
+
+    @include breakpoints-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoints-up(large) {
+      grid-template-columns: repeat(3, 1fr);
+      min-width: 23.125rem;
+    }
+  }
+
+  &__item {
+    border-radius: 0.3125rem;
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.05); // this is scale upto 105%
+    }
+  }
+
+  &__image {
+    height: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    padding: 2.5rem 1.6875rem 1.75rem 1.6875rem;
+
+    @include breakpoints-up(medium) {
+      padding: 1.875rem 1.5625rem;
+    }
+  }
+
+  &__author {
+    color: $lightDarkBlue;
+    margin-bottom: 1.1875rem;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    &__inner {
+      display: flex;
+      align-items: center;
+
+      span:first-child {
+        color: $lightDarkBlue;
+        font-size: 0.875rem;
+        font-weight: bold;
+      }
+
+      span:nth-child(2) {
+        color: $primary-color;
+        font-weight: bold;
+      }
+
+      span:nth-child(3) {
+        color: $primary-color;
+        font-size: 0.75rem;
+      }
+
+      span:last-child {
+        color: $primary-color;
+        margin-right: 5px;
+      }
+
+      span:not(:last-child) {
+        margin-right: 0.3125rem;
+      }
+    }
+  }
+
+  &__description {
+     margin-top: 1.25rem;
+  }
+}

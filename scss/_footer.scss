@@ -1,0 +1,124 @@
+.footer {
+  @include breakpoints-up(large) {
+    margin-top: 6.25rem;
+  }
+
+  @include breakpoints-down(medium) {
+    margin-top: 3.125rem;
+  }
+
+  background-image: url(/images/starry-night.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 31.25rem;
+  padding-top: 6.25rem;
+
+  @include breakpoints-down(medium) {
+     padding-top: 50px;
+  }
+
+  .grid {
+    @include breakpoints-up(large) {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr) 1fr 1fr;
+      gap: 1rem;
+      justify-items: start;
+    }
+
+    @include breakpoints-down(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-items: start;
+    }
+
+    @include breakpoints-down(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__logo {
+    position: relative;
+
+    img {
+      width: 3.75rem;
+      height: auto;
+      background-position: center center;
+      object-fit: cover;
+    }
+
+    h3 {
+      position: absolute;
+      transform: translatey(-40%);
+      font-size: 1.5625rem;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  &__heading {
+    p:first-child {
+      color: $lightGray;
+      margin-top: 1.875rem;
+      max-width: 20.125rem;
+    }
+  }
+
+  &__blog {
+    h3:first-child {
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    img {
+      width: 61px;
+      height: 64px;
+    }
+  }
+
+  &__description {
+    margin-left: 10px;
+
+    p:first-child {
+      color: $white;
+      margin: 0px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    span:nth-child(2) {
+      font-size: 11px;
+      color: $lightGray;
+    }
+
+    span:last-child {
+      display: block;
+      color: $white;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    h3:first-child {
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: $lightGray;
+      line-height: 2.25;
+      transition: color 150ms ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

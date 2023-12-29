@@ -1,0 +1,90 @@
+.hero {
+  &__container {
+    margin-top: 1.875rem;
+
+    @include breakpoints-down(medium) {
+      margin-top: 0;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__image {
+    background-image: url(/images/young-smiley-girl-portrait-pointing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    height: 100vh;
+
+    @include breakpoints-down(medium) {
+      height: auto;
+      min-height: 64vh;
+    }
+  }
+
+  &__text {
+    > div {
+      max-width: 34.375rem;
+
+      @include breakpoints-down(medium) {
+         max-width: 425px;
+      }
+
+      @include breakpoints-down(small) {
+        max-width: 345px;
+      }
+
+      p:first-child {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 1.125rem;
+
+        @include breakpoints-down(medium) {
+          font-size: 1rem;
+        }
+      }
+
+      h1:nth-child(2) {
+        color: $darkBlue;
+        font-size: 3.125rem;
+  
+        @include breakpoints-down(medium) {
+          font-size: 2.5rem;
+        }
+
+        @include breakpoints-down(small) {
+          font-size: 2rem;
+        }
+      }
+
+      p:nth-child(3) {
+        color: $white;
+        font-size: 1.125rem;
+
+        @include breakpoints-down(medium) {
+          font-size: 1rem;
+        }
+
+         @include breakpoints-down(small) {
+          font-size: 0.875rem;
+        }
+      }
+
+      button:last-child {
+        color: $white;
+        border: none;
+        background-color: $primary-color;
+        border-radius: 0.3125rem;
+        padding: 1.25rem 2.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.8);
+
+        @include breakpoints-down(medium) {
+          padding: 1rem 2rem;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
