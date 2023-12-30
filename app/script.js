@@ -47,7 +47,7 @@ window.addEventListener('scroll', toogleButtonVisibility)
 button.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth"
     })
 })
 

@@ -115,7 +115,8 @@ p {
   border: none;
   border-radius: 20px;
   background: #f43f5e;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 9999; }
   .button-1 img:first-child {
     width: 20px;
     height: 25px; }
@@ -234,7 +235,7 @@ p {
       padding-bottom: 2rem; } }
 
 .hero__image {
-  background-image: url(/images/young-smiley-girl-portrait-pointing.jpg);
+  background-image: url(/images/smiling-boy.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 1px;
@@ -242,7 +243,7 @@ p {
   @media (max-width: 63.9375em) {
     .hero__image {
       height: auto;
-      min-height: 64vh; } }
+      min-height: 75vh; } }
 
 .hero__text > div {
   max-width: 34.375rem; }
@@ -251,11 +252,12 @@ p {
       max-width: 425px; } }
   @media (max-width: 39.9375em) {
     .hero__text > div {
-      max-width: 345px; } }
+      max-width: 235px; } }
   .hero__text > div p:first-child {
     text-transform: uppercase;
     color: white;
-    font-size: 1.125rem; }
+    font-size: 1.125rem;
+    font-weight: bold; }
     @media (max-width: 63.9375em) {
       .hero__text > div p:first-child {
         font-size: 1rem; } }

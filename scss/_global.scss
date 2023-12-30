@@ -128,10 +128,10 @@ p{
    border-radius: 20px;
    background: $primary-color;
    cursor: pointer;
+   z-index: 9999;
 
    img:first-child {
      width: 20px;
      height: 25px;
    }
-
 }
