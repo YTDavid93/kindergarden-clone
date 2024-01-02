@@ -55,13 +55,25 @@
     overflow: hidden;
     background-color: $white;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
-    transition: all 150ms ease-in-out;
+    // transition: all 100ms ease-in-out;
+    // &:hover {
+    //   transform: scale(1.05); // this is scale upto 105%
+    // }
 
-    &:hover {
-      transform: scale(1.05); // this is scale upto 105%
-    }
+  }
+  
+  &__item:nth-child(1) {
+    transition-delay: 200ms;
   }
 
+  &__item:nth-child(2) {
+     transition-delay: 400ms;
+  }
+
+  &__item:nth-child(3) {
+    transition-delay: 600ms;
+  }
+  
   &__image {
     height: 12.5rem;
     background-size: cover;

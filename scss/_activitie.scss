@@ -50,6 +50,14 @@
       }
   }
 
+   &__main:nth-child(2) {
+     transition-delay: 200ms;
+   }
+   
+   &__main:nth-child(3) {
+     transition-delay: 400ms;
+   }
+
   &__image {
     width: 100px;
     height: 100px;
@@ -72,7 +80,6 @@
      @include breakpoints-down(medium) {
         margin-top: 10px;
       }
-     
 
      span:first-child {
         color: $lightGray;
@@ -104,6 +111,5 @@
      p:last-child > span {
         color: $primary-color;
      }
-
   }
 }

@@ -1,8 +1,55 @@
+const hiddenElemns = document.querySelectorAll('.hidden');
+const hiddenYElems = document.querySelectorAll('.hidden-y')
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+      } else {
+        entry.target.classList.remove('show')
+      }
+    })
+  })
+
+  const observeY = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+       if (entry.isIntersecting) {
+         entry.target.classList.add('show-y')
+       } else {
+         entry.target.classList.remove('show-y')
+       }
+    })
+  })
+    
+hiddenElemns.forEach((el) => observer.observe(el));
+hiddenYElems.forEach((el) => observeY.observe(el))
+
 const btnHamburger = document.querySelector("#btnhamburger");
 const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const overlay = document.querySelector(".overlay");
 const fadeElems = document.querySelectorAll(".has-fade");
+const button = document.querySelector('.button-1');
+
+function toogleButtonVisibility() {
+      if (window.scrollY > 300) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+}
+
+toogleButtonVisibility();
+
+window.addEventListener('scroll', toogleButtonVisibility)
+
+button.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
 
 btnHamburger.addEventListener("click", () => {
   if (header.classList.contains("open")) {
@@ -29,25 +76,4 @@ btnHamburger.addEventListener("click", () => {
     });
   }
 });
-
-const button = document.querySelector('.button-1');
-
-function toogleButtonVisibility() {
-    if (window.scrollY > 300) {
-        button.style.display = 'block';
-    } else {
-        button.style.display = 'none';
-    }
-}
-
-toogleButtonVisibility();
-
-window.addEventListener('scroll', toogleButtonVisibility)
-
-button.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-})
 

@@ -30,6 +30,28 @@
 .fade-out {
   animation: fade-out 200ms ease-in-out forwards; }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s; }
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0); }
+
+.hidden-y {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1s; }
+
+.show-y {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0); }
+
 html {
   font-size: 100%;
   box-sizing: border-box; }
@@ -427,10 +449,16 @@ p {
   border-radius: 0.3125rem;
   overflow: hidden;
   background-color: white;
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
-  transition: all 150ms ease-in-out; }
-  .program__item:hover {
-    transform: scale(1.05); }
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15); }
+
+.program__item:nth-child(1) {
+  transition-delay: 200ms; }
+
+.program__item:nth-child(2) {
+  transition-delay: 400ms; }
+
+.program__item:nth-child(3) {
+  transition-delay: 600ms; }
 
 .program__image {
   height: 12.5rem;
@@ -507,8 +535,13 @@ p {
       border: 2px dashed #f43f5e;
       border-radius: 40px;
       padding: 5px 0px 5px 30px; }
-      .feature__icons__item span:last-child {
-        color: #f43f5e; }
+      .feature__icons__item button:last-child {
+        color: #f43f5e;
+        border: none;
+        background: none;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 16px; }
       @media (max-width: 39.9375em) {
         .feature__icons__item {
           margin-bottom: 35px; } }
@@ -521,7 +554,11 @@ p {
       padding: 5px 0px 5px 30px; }
       .feature__icons__item1 .feature__icons__title {
         color: #1e3a8a;
-        font-weight: 500; }
+        border: none;
+        background: none;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 16px; }
       @media (max-width: 39.9375em) {
         .feature__icons__item1 {
           margin-bottom: 35px; } }
@@ -631,6 +668,12 @@ p {
     .activitie__main {
       padding-left: 5px;
       padding-right: 5px; } }
+
+.activitie__main:nth-child(2) {
+  transition-delay: 200ms; }
+
+.activitie__main:nth-child(3) {
+  transition-delay: 400ms; }
 
 .activitie__image {
   width: 100px;
