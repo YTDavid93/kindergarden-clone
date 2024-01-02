@@ -62,16 +62,12 @@
 
   }
   
-  &__item:nth-child(1) {
+  &__item:nth-child(2) {
     transition-delay: 200ms;
   }
 
-  &__item:nth-child(2) {
-     transition-delay: 400ms;
-  }
-
   &__item:nth-child(3) {
-    transition-delay: 600ms;
+     transition-delay: 400ms;
   }
   
   &__image {

@@ -451,14 +451,11 @@ p {
   background-color: white;
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15); }
 
-.program__item:nth-child(1) {
+.program__item:nth-child(2) {
   transition-delay: 200ms; }
 
-.program__item:nth-child(2) {
-  transition-delay: 400ms; }
-
 .program__item:nth-child(3) {
-  transition-delay: 600ms; }
+  transition-delay: 400ms; }
 
 .program__image {
   height: 12.5rem;
